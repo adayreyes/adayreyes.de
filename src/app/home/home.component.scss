@@ -1,0 +1,44 @@
+.main-container{
+    background-color: var(--bg-black);
+
+    span{
+        margin: 0;
+    }
+
+    button{
+        font-size: var(--p);
+        padding: var(--space-s) var(--space-xxl);
+        background-color: black;
+        color: var(--secundary);
+        border: none;
+        border: 3px solid var(--secundary);
+        margin-top: var(--space-xl) ;
+        cursor: pointer;
+    }
+
+    
+
+}
+
+.sub-container{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-m);
+
+    img{
+        min-width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+}
+
+.arrow-container{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 80px;
+        margin-top: var(--space-xl);
+        cursor: pointer;
+    }
+}
