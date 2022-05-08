@@ -5,7 +5,13 @@
         margin: 0;
     }
 
-    button{
+    
+    
+    
+}
+
+.info-container{
+    a{
         font-size: var(--p);
         padding: var(--space-s) var(--space-xxl);
         background-color: black;
@@ -14,10 +20,17 @@
         border: 3px solid var(--secundary);
         margin-top: var(--space-xl) ;
         cursor: pointer;
-    }
-
+        text-decoration: none;
+        transition: all 100ms ease;
+        white-space: nowrap;
+        
     
-
+        &:hover{
+            background-color: var(--secundary);
+            color: var(--primary);
+        }
+    }
+    
 }
 
 .sub-container{

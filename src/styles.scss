@@ -11,7 +11,9 @@
     --space-xxl: 105px;
     --p: 18px;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding:0;

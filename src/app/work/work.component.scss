@@ -38,5 +38,37 @@ section{
     background-color: white;
     width: 400px;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        color: var(--primary);
+        margin-bottom: 0;
+    }
+    p{
+        color: black;
+        margin-bottom: 3rem;
+    }
+    button{
+        color: var(--primary);
+        background-color: white;
+        padding: 1rem 1.5rem;
+        border: none;
+        border: 2px solid var(--primary);
+        font-size: var(--p);
+        cursor: pointer;
+        transition: all 100ms ease;
+
+        &:hover{
+            background-color: var(--primary);
+            color: white;
+        }
+
+
+
+
+    }
 }
 
