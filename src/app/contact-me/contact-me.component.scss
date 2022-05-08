@@ -1,0 +1,56 @@
+section{
+    background-color: var(--bg-black);
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5rem 30%;
+
+h2{
+    font-size: 4rem;
+    color: var(--secundary);
+}
+
+    form{
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        gap: 1rem;
+
+        input{
+            height: 2rem;
+            background-color: var(--bg-grey);
+            border-style: unset;
+            font-size: var(--p);
+            padding-left: 1rem;
+            outline: none;
+            &:focus{
+                outline: 1px solid var(--primary);
+            }
+        }
+        
+        .message-input{
+            height: 150px;
+            background-color: var(--bg-grey);
+            padding-left: 1rem;
+            resize: none;
+            font-size: var(--p);
+            font-family: inherit;
+            outline: none;
+            &:focus{
+                outline: 1px solid var(--primary);
+            }
+            border: none;
+        }
+
+        button{
+            align-self: flex-end;
+            width: 150px;
+            height: 70px;
+            font-size: var(--p);
+            background-color: black;
+            color: var(--secundary);
+            border: none;
+            border: 2px solid var(--secundary);
+        }
+    }
+}
