@@ -8,6 +8,8 @@ section{
 .languages-container{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
     button{
         width: 150px;
@@ -36,7 +38,8 @@ section{
 
 .project{
     background-color: white;
-    width: 400px;
+    width: 95%;
+    max-width: 400px;
     height: 300px;
     display: flex;
     flex-direction: column;
