@@ -1,41 +1,17 @@
-<section id="portfolio">
+<section id="projects">
     <h2>My Work</h2>
     <div class="languages-container">
-        <button>All</button>
-        <button>Angular</button>
-        <button>Javascript</button>
+        <button (click)="showAllProjects()">All</button>
+        <button (click)="showAngularProjects()">Angular</button>
+        <button (click)="showJavascriptProjects()">Javascript</button>
     </div>
     <div class="projects-container">
-        <div class="project sharkie">
-            <div class="background-img" [ngStyle]="{'background-image': 'url(../../assets/img/projects/'+ projects.sharkie.img +')'}"></div>
+        <div *ngFor="let project of projects" class="project" [ngClass]="[project.css_class,project.language]" #{{project.css_class}}>
+            <div class="background-img"></div>
             <div class="project-info">
-                <h3>{{ projects.sharkie.name }}</h3>
-                <p>{{ projects.sharkie.description }}</p>
-                <button><a href="{{projects.sharkie.link}}" target="_blank"></a> Try out</button>
-            </div>
-        </div>
-        <div class="project join">
-            <div class="background-img" [ngStyle]="{'background-image': 'url(../../assets/img/projects/'+ projects.join.img +')'}"></div>
-            <div class="project-info">
-                <h3>{{ projects.join.name }}</h3>
-                <p>{{ projects.join.description }}</p>
-                <button><a href="{{projects.join.link}}" target="_blank"></a> Try out</button>
-            </div>
-        </div>
-        <div class="project pokedex">
-            <div [ngStyle]="{'background-image': 'url(../../assets/img/projects/'+ projects.pokedex.img +')'}" class="background-img"></div>
-            <div class="project-info">
-                <h3>{{ projects.pokedex.name }}</h3>
-                <p>{{ projects.pokedex.description }}</p>
-                <button><a href="{{projects.pokedex.link}}" target="_blank"></a> Try out</button>
-            </div>
-        </div>
-        <div class="project ringoffire">
-            <div class="background-img" [ngStyle]="{'background-image': 'url(../../assets/img/projects/'+ projects.ringoffire.img +')'}"></div>
-            <div class="project-info">
-                <h3>{{ projects.ringoffire.name }}</h3>
-                <p>{{ projects.ringoffire.description }}</p>
-                <button><a href="{{projects.ringoffire.link}}" target="_blank"></a> Try out</button>
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                <button><a href="{{project.link}}" target="_blank"></a> Try out</button>
             </div>
         </div>
     </div>

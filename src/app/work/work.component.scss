@@ -116,25 +116,33 @@ section{
 }
 .sharkie{
     .background-img{
+        background-image: url(../../assets/img/projects/sharkiepc.jpg);
         background-size: cover;
         background-position: 47%;
     }
 }
 .join{
     .background-img{
+        background-image: url(../../assets/img/projects/join.jpg);
         background-size: cover;
         background-position: 46%;
     }
 }
 .pokedex{
     .background-img{
+        background-image: url(../../assets/img/projects/pokedex.jpg);
         background-size: cover;
         background-position: 78%;
     }
 }
 .ringoffire{
     .background-img{
+        background-image: url(../../assets/img/projects/ringoffire.jpg);
         background-size: cover;
         background-position: 20%;
     }
+}
+
+.none{
+    display: none;
 }
