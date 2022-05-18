@@ -48,25 +48,30 @@ h2{
             border: none;
         }
 
-        button{
-            align-self: flex-end;
-            width: 150px;
-            height: 70px;
-            font-size: var(--p);
-            background-color: black;
-            color: var(--secundary);
-            margin-right: 40px;
-            border: none;
-            border: 2px solid var(--secundary);
-            cursor: pointer;
-            transition: all 100ms ease;
-
-            &:hover{
-                background-color: var(--secundary);
-                color: var(--primary);
-            }
-        }
     }
+}
+button{
+    align-self: flex-end;
+    width: 150px;
+    height: 70px;
+    font-size: var(--p);
+    background-color: rgb(114, 112, 112);
+    margin-right: 40px;
+    border: none;
+    transition: all 100ms ease;
+    
+}
+
+.button-enable{
+    cursor: pointer;
+    border: 2px solid var(--secundary);
+    background-color: black;
+    color: var(--secundary);
+    &:hover{
+        background-color: var(--secundary);
+        color: var(--primary);
+    }
+    
 }
 
 @media(max-width:900px){

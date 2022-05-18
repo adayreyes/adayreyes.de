@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { compileDeclarePipeFromMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,6 +15,8 @@ export class ContactMeComponent implements OnInit {
     email: '', //Bind to InputField name="email"
     message: '', //Bind to InputField name="message"
   };
+
+  
   
   /**
    * A post request construct configuration
@@ -36,7 +39,13 @@ export class ContactMeComponent implements OnInit {
   
     ngOnInit(): void {
     }
-    
+
+    clearForm(){
+      this.contact.name = "";
+      this.contact.email = "";
+      this.contact.message = "";
+    }
+
     onSubmit(ngForm) {
       if (ngForm.submitted && ngForm.form.valid) {
         this.http
@@ -50,7 +59,8 @@ export class ContactMeComponent implements OnInit {
               console.error(error);
               // Here Message was not send!!!!!
             },
-            complete: () => console.info('send post complete'),
+            complete: () => 
+            this.clearForm(),
           });
       }
     }
