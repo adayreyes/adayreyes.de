@@ -18,7 +18,7 @@ export class WorkComponent implements OnInit {
     new Project("Sharkie","Game based OPP with Javascript","sharkiepc.jpg","https://aday-reyes.developerakademie.net/Sharkie-game/index.html","sharkie","javascript"),
     new Project("Join","Game based OPP with Javascript","join.jpg","https://aday-reyes.developerakademie.net/Join/index.html","join","javascript"),
     new Project("Pokedex","Game based OPP with Javascript","pokedex.jpg","https://aday-reyes.developerakademie.net/Pokedex/index.html","pokedex","javascript"),
-    new Project("Ring of fire","Game based OPP with Javascript","ringoffire.jpg","https://aday-reyes.developerakademie.net/ringoffire/","ringoffire","angular"),
+    new Project("Ring of fire","Game based OPP with Javascript","ringoffire.jpg","https://ring-of-fire-3f187.web.app","ringoffire","angular"),
   ]
   
 
