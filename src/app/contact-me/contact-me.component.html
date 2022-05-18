@@ -2,13 +2,13 @@
     <div class="main-container">
         <h2>Contact me.</h2>
         <p>Get in touch via the form below, or by emailing <span class="secundary">adayreyesdev@gmail.com</span></p>
-        <form action="">
+        <form (ngSubmit)="onSubmit(contactForm)"  #contactForm="ngForm">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" [(ngModel)]="contact.name" id="name" name="name" placeholder="Enter your name" #name="ngModel">
             <label for="email">Email address</label>
-            <input type="text" id="email" placeholder="Enter your Email address">
+            <input type="text" [(ngModel)]="contact.email" name="email" id="email" placeholder="Enter your Email address" #email="ngModel">
             <label for="message">Message</label>
-            <textarea class="message-input" placeholder="Enter your message" id="message" cols="30" rows="10"></textarea>
+            <textarea class="message-input" [(ngModel)]="contact.message" name="message" placeholder="Enter your message" id="message" #message="ngModel" cols="30" rows="10"></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
