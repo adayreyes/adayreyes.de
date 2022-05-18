@@ -10,6 +10,9 @@ import { WorkComponent } from './work/work.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from './footer/footer.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FooterComponent } from './footer/footer.component';
     WorkComponent,
     AboutMeComponent,
     ContactMeComponent,
-    FooterComponent
+    FooterComponent,
+    ImpressumComponent,
+    LegalNoticeComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
