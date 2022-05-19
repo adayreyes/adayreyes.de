@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { compileDeclarePipeFromMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { SuccessComponent } from '../success/success.component';
 
 @Component({
   selector: 'app-contact-me',
@@ -35,11 +37,15 @@ export class ContactMeComponent implements OnInit {
         },
       },
     };
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient,public success_dialog: MatDialog) { }
   
     ngOnInit(): void {
     }
 
+    openSuccessDialog() {
+      this.success_dialog.open(SuccessComponent);
+    }
+    
     clearForm(){
       this.contact.name = "";
       this.contact.email = "";
@@ -59,8 +65,10 @@ export class ContactMeComponent implements OnInit {
               console.error(error);
               // Here Message was not send!!!!!
             },
-            complete: () => 
-            this.clearForm(),
+            complete: () => {
+            this.clearForm() 
+            this.openSuccessDialog();
+            }
           });
       }
     }

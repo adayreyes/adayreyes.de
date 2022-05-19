@@ -15,6 +15,10 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { IndexComponent } from './index/index.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SuccessComponent } from './success/success.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,17 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ImpressumComponent,
     LegalNoticeComponent,
-    IndexComponent
+    IndexComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    MatButtonModule,
+    MatDialogModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
