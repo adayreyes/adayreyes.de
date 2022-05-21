@@ -15,10 +15,10 @@ export class WorkComponent implements OnInit {
   }
 
   projects = [
-    new Project("Sharkie","Game based OPP with Javascript","sharkiepc.jpg","https://aday-reyes.developerakademie.net/Sharkie-game/index.html","sharkie","javascript"),
-    new Project("Join","Game based OPP with Javascript","join.jpg","https://aday-reyes.developerakademie.net/Join/index.html","join","javascript"),
-    new Project("Pokedex","Game based OPP with Javascript","pokedex.jpg","https://aday-reyes.developerakademie.net/Pokedex/index.html","pokedex","javascript"),
-    new Project("Ring of fire","Game based OPP with Javascript","ringoffire.jpg","https://ring-of-fire-3f187.web.app","ringoffire","angular"),
+    new Project("Sharkie","Fight your enemies as Sharkie in a jump and run game. (Javascript)","sharkiepc.jpg","https://aday-reyes.developerakademie.net/Sharkie-game/index.html","sharkie","javascript"),
+    new Project("Join","Kanban board for project managament. (Javascript and Firebase)","join.jpg","https://aday-reyes.developerakademie.net/Join/index.html","join","javascript"),
+    new Project("Pokedex","Search for your favorite Pokemons or discover new ones. Don't forget to add them to your favorites! (Javascript and REST API)","pokedex.jpg","https://aday-reyes.developerakademie.net/Pokedex/index.html","pokedex","javascript"),
+    new Project("Ring of fire","Popular drinking game to play online with friends. (Angular and Firebase)","ringoffire.jpg","https://ring-of-fire-3f187.web.app","ringoffire","angular"),
   ]
   
 
