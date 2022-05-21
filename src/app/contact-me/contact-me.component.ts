@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { compileDeclarePipeFromMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
 import { SuccessComponent } from '../success/success.component';
 
 @Component({
@@ -37,13 +36,13 @@ export class ContactMeComponent implements OnInit {
         },
       },
     };
-    constructor(private http: HttpClient,public success_dialog: MatDialog) { }
+    constructor(private http: HttpClient) { }
   
     ngOnInit(): void {
     }
 
     openSuccessDialog() {
-      this.success_dialog.open(SuccessComponent);
+
     }
     
     clearForm(){
