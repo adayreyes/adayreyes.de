@@ -61,8 +61,18 @@ nav{
         .drop-icon{
             display: inline;
         }
+
+        
     }
     .links{
         display: none;
+    }
+}
+
+@media(min-width:1500px){
+    nav{
+        img{
+            width: 130px;
+        }
     }
 }
