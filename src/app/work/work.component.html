@@ -6,7 +6,7 @@
         <button (click)="showJavascriptProjects()">Javascript</button>
     </div>
     <div class="projects-container">
-        <div *ngFor="let project of projects" class="project" [ngClass]="[project.css_class,project.language]" #{{project.css_class}}>
+        <div *ngFor="let project of projects" class="project" [ngClass]="[project.css_class,project.language]" #{{project.css_class}} data-aos="flip-left">
             <div class="background-img"></div>
             <div class="project-info">
                 <h3>{{ project.name }}</h3>
