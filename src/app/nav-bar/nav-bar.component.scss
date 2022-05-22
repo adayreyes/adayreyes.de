@@ -72,6 +72,13 @@ nav{
         align-items: center;
         gap: 1rem;
 
+        a{
+            border: none;
+            &:hover{
+                background-color: unset;
+            }
+        }
+
         img{
             filter: brightness(0) invert(1);
         };
