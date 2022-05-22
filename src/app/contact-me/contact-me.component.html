@@ -1,7 +1,7 @@
 <section id="contact">
     <div class="main-container">
         <h2 data-aos="flip-down">Contact me.</h2>
-        <p>Get in touch via the form below, or by emailing <a href="mailto:adayreyesdev@gmail.com" class="secundary">adayreyesdev@gmail.com</a></p>
+        <p>Get in touch via the form below, or by emailing <a href="mailto:adayreyesdev@gmail.com">adayreyesdev@gmail.com</a></p>
         <form data-aos="flip-down" (ngSubmit)="onSubmit(contactForm)"  #contactForm="ngForm">
             <label for="name">Name</label>
             <input required type="text" [(ngModel)]="contact.name" id="name" name="name" placeholder="Enter your name" #name="ngModel">
@@ -9,7 +9,12 @@
             <input required type="text" [(ngModel)]="contact.email" name="email" id="email" placeholder="Enter your Email address" #email="ngModel">
             <label for="message">Message</label>
             <textarea required class="message-input" [(ngModel)]="contact.message" name="message" placeholder="Enter your message" id="message" #message="ngModel" cols="30" rows="10"></textarea>
-            <button [class.button-enable]="contact.name && contact.email && contact.message" type="submit">Send</button>
+            <button class="send-button" [class.button-enable]="contact.name && contact.email && contact.message" type="submit">Send</button>
         </form>
+    </div>
+    <div class="success-dialog" id="success-dialog">
+        <h3>Danke für Ihre Nachricht!</h3>
+        <p>Ich werde mich sobald wie möglich bei Ihnen melden</p>
+        <button (click)="closeSuccessDialog()">OK</button>
     </div>
 </section>

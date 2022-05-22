@@ -42,6 +42,13 @@ export class ContactMeComponent implements OnInit {
     }
 
     openSuccessDialog() {
+      let dialog = document.getElementById("success-dialog");
+      dialog.style.display = "flex";
+    }
+    
+    closeSuccessDialog(){
+      let dialog = document.getElementById("success-dialog");
+      dialog.style.display = "none";
 
     }
     

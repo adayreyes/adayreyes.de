@@ -3,12 +3,14 @@
 section{
     background-color: var(--bg-black);
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     
     a{
         transition: all 125ms ease;
         text-decoration: none;
+        color: var(--secundary);
         &:hover{
             color: var(--primary);
         }
@@ -57,7 +59,7 @@ h2{
 
     }
 }
-button{
+.send-button{
     align-self: flex-end;
     width: 150px;
     height: 70px;
@@ -79,6 +81,33 @@ button{
         color: var(--primary);
     }
     
+}
+
+.success-dialog{
+    background-color: white;
+    color: black;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 6px 12px -2px, rgba(255, 255, 255, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    position: fixed;
+    top: 3rem;
+    text-align: center;
+    width: 250px;
+    height: 220px;
+    display: none;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+
+    button{
+        background-color: black;
+        color: var(--secundary);
+        width: 100px;
+        height: 50px;
+        font-size: var(--p);
+        border: 2px solid var(--secundary)
+    }
 }
 
 @media(max-width:900px){
