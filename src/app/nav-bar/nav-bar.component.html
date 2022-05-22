@@ -8,7 +8,12 @@
     <img (click)="dropMenu()" class="drop-icon" src="assets/img/icons/menu-4-64.ico" alt="">
 </nav>
 <div id="drop-menu" class="drop-menu">
-    <a href="#home">Home</a>
-    <a href="#projects">Portfolio</a>
-    <a href="#about">About</a>
+    <a (click)="dropMenu()" href="#home">Home</a>
+    <a (click)="dropMenu()" href="#projects">Portfolio</a>
+    <a (click)="dropMenu()" href="#about">About</a>
+    <div class="social-container">
+        <img src="assets/img/icons/github-fill.png" alt="">
+        <img src="assets/img/icons/linkedin-box-fill.png" alt="">
+        <img src="assets/img/icons/xing-fill.png" alt="">
+    </div>
 </div>

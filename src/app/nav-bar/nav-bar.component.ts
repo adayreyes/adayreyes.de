@@ -21,10 +21,21 @@ export class NavBarComponent implements OnInit {
     this.checkDropMenu();
   }
   checkDropMenu(){
+    let dropmenu = document.getElementById("drop-menu");
     if(this.open){
-      document.getElementById("drop-menu").style.display = "flex";
+      dropmenu.style.display = "flex";
+      if(dropmenu.classList.contains("hideup")){
+        dropmenu.classList.replace("hideup","fadedown")
+      } else{
+        dropmenu.classList.add("fadedown")
+      }
+      document.body.style.overflowY="hidden"
     } else{
-      document.getElementById("drop-menu").style.display = "none";
+      dropmenu.classList.replace("fadedown","hideup");
+      setTimeout(() => {
+        dropmenu.style.display = "none";
+        document.body.style.overflowY="auto"
+      }, 500);
     }
   }
 }
