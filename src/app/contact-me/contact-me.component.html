@@ -6,7 +6,7 @@
             <label for="name">Name</label>
             <input required type="text" [(ngModel)]="contact.name" id="name" name="name" placeholder="Enter your name" #name="ngModel">
             <label for="email">Email address</label>
-            <input required type="text" [(ngModel)]="contact.email" name="email" id="email" placeholder="Enter your Email address" #email="ngModel">
+            <input required type="email"  ngModel [email]="true" [(ngModel)]="contact.email" name="email" id="email" placeholder="Enter your Email address" #email="ngModel">
             <label for="message">Message</label>
             <textarea required class="message-input" [(ngModel)]="contact.message" name="message" placeholder="Enter your message" id="message" #message="ngModel" cols="30" rows="10"></textarea>
             <button class="send-button" [class.button-enable]="contact.name && contact.email && contact.message" type="submit">Send</button>
