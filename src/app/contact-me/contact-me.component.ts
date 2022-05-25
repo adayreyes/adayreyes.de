@@ -40,7 +40,9 @@ export class ContactMeComponent implements OnInit {
   
     ngOnInit(): void {
     }
-
+    
+    emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+    
     openSuccessDialog() {
       let dialog = document.getElementById("success-dialog");
       dialog.style.display = "flex";
