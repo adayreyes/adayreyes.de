@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { compileDeclarePipeFromMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SuccessComponent } from '../success/success.component';
 
 @Component({
@@ -25,7 +26,7 @@ export class ContactMeComponent implements OnInit {
   post = {
     // Where to send the post request Ex. http://my-domain/sendMail.php
       //or https://my-domain/sendMail.php if you have SSL-Certificate Active
-      endPoint: 'https://www.aday-reyes.developerakademie.net/portfolio/send_mail.php',
+      endPoint: 'https://www.aday-reyes.de/send_mail.php',
       // What to send, notice JSON.stringify
       body: (payload: any) => JSON.stringify(payload),
       // How to send, notice Content-Type and responseType
@@ -37,12 +38,23 @@ export class ContactMeComponent implements OnInit {
       },
     };
     constructor(private http: HttpClient) { }
-  
+
+
+
+    
+    exform: FormGroup;
     ngOnInit(): void {
+      this.exform = new FormGroup({
+        "name" : new FormControl(null, Validators.required),
+        "email" : new FormControl(null, [Validators.required, Validators.email]),
+        "message" : new FormControl(null, [Validators.required, Validators.minLength(10)])
+      })
     }
     
-    emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
-    
+
+
+
+
     openSuccessDialog() {
       let dialog = document.getElementById("success-dialog");
       dialog.style.display = "flex";
@@ -53,17 +65,11 @@ export class ContactMeComponent implements OnInit {
       dialog.style.display = "none";
 
     }
-    
-    clearForm(){
-      this.contact.name = "";
-      this.contact.email = "";
-      this.contact.message = "";
-    }
 
-    onSubmit(ngForm) {
-      if (ngForm.submitted && ngForm.form.valid) {
+    onSubmit(exform) {
+      if (exform.valid) {
         this.http
-          .post(this.post.endPoint, this.post.body(this.contact))
+          .post(this.post.endPoint, this.post.body(exform.value))
           .subscribe({
             next: (response) => {
               console.log(response);
@@ -74,7 +80,7 @@ export class ContactMeComponent implements OnInit {
               // Here Message was not send!!!!!
             },
             complete: () => {
-            this.clearForm() 
+            this.exform.reset();
             this.openSuccessDialog();
             }
           });

@@ -36,9 +36,9 @@ h2{
             font-size: var(--p);
             padding-left: 1rem;
             outline: none;
-            &:focus{
-                outline: 1px solid var(--primary);
-            }
+
+    
+            
         }
         
         .message-input{
@@ -50,13 +50,13 @@ h2{
             resize: none;
             font-size: var(--p);
             font-family: inherit;
-            outline: none;
-            &:focus{
-                outline: 1px solid var(--primary);
-            }
             border: none;
+            &:focus{
+                outline: none;
+            }
+            
         }
-
+        
     }
 }
 .send-button{
@@ -108,6 +108,19 @@ h2{
         font-size: var(--p);
         border: 2px solid var(--secundary)
     }
+}
+
+.input-box{
+    color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid{
+    outline: 1px solid green;
 }
 
 @media(max-width:900px){
