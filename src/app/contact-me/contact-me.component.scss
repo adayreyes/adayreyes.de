@@ -61,8 +61,8 @@ h2{
 }
 .send-button{
     align-self: flex-end;
-    width: 150px;
-    height: 70px;
+    width: 100px;
+    height: 50px;
     font-size: var(--p);
     background-color: rgb(114, 112, 112);
     margin-right: 40px;
@@ -106,7 +106,8 @@ h2{
         width: 100px;
         height: 50px;
         font-size: var(--p);
-        border: 2px solid var(--secundary)
+        border: 2px solid var(--secundary);
+        cursor: pointer;
     }
 }
 

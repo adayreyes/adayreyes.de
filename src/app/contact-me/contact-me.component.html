@@ -18,7 +18,7 @@
                 <textarea required class="message-input form-control" formControlName="message" name="message" placeholder="Enter your message" id="message" cols="30" rows="10"></textarea>
                 <small *ngIf="exform.get('message').invalid && exform.get('message').touched">This field is required (min length: 10)</small>
             </div>
-            <button class="send-button" [disabled]="exform.invalid" type="submit">Send</button>
+            <button class="send-button" [disabled]="exform.invalid" [class.button-enable]="exform.valid" type="submit">Send</button>
         </form>
     </div>
     <div class="success-dialog" id="success-dialog">

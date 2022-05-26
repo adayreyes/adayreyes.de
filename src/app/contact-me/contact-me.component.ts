@@ -67,9 +67,9 @@ export class ContactMeComponent implements OnInit {
     }
 
     onSubmit(exform) {
-      if (exform.valid) {
+      if (this.exform.valid) {
         this.http
-          .post(this.post.endPoint, this.post.body(exform.value))
+          .post(this.post.endPoint, this.post.body(this.exform.value))
           .subscribe({
             next: (response) => {
               console.log(response);
