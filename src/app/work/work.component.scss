@@ -83,6 +83,11 @@ section{
     }
 }
 
+.primary{
+    background-color: var(--primary) !important;
+}
+
+
 .project-info{
     opacity: 0;
     transition: all 125ms ease;

@@ -1,9 +1,9 @@
 <section id="projects">
     <h2>My Work</h2>
     <div class="languages-container">
-        <button (click)="showAllProjects()">All</button>
-        <button (click)="showAngularProjects()">Angular</button>
-        <button (click)="showJavascriptProjects()">Javascript</button>
+        <button [class.primary]="angular && javascript" (click)="showAllProjects()">All</button>
+        <button [class.primary]="angular && !javascript" id="angular" (click)="showAngularProjects()">Angular</button>
+        <button [class.primary]="javascript && !angular" id="javascript" (click)="showJavascriptProjects()">Javascript</button>
     </div>
     <div class="projects-container">
         <div *ngFor="let project of projects" class="project" [ngClass]="[project.css_class,project.language]" #{{project.css_class}} data-aos="flip-left">

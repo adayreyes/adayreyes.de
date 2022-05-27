@@ -23,14 +23,19 @@ export class WorkComponent implements OnInit {
   
 
   showAllProjects(){
+    this.javascript = true;
+    this.angular = true;
     let projects = document.getElementsByClassName("project");
     for (let i = 0; i < projects.length; i++) {
       const project = projects[i];
       project.classList.remove("none")
     }
   }
+  
 
   showAngularProjects(){
+    this.angular = true;
+    this.javascript = false;
     this.showAllProjects();
     let javascript_projects = document.getElementsByClassName("javascript");
     for (let i = 0; i < javascript_projects.length; i++) {
@@ -40,6 +45,8 @@ export class WorkComponent implements OnInit {
   }
 
   showJavascriptProjects(){
+    this.javascript = true;
+    this.angular = false;
     this.showAllProjects();
     let angular_projects = document.getElementsByClassName("angular");
     for (let i = 0; i < angular_projects.length; i++) {
